@@ -1,0 +1,22 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^login$ ceklogin.php [L]
+RewriteRule ^home$ index.php?pages=home [L]
+RewriteRule ^about$ index.php?pages=about [L]
+RewriteRule ^signin$ index.php?pages=signin [QSA]
+RewriteRule ^signup$ index.php?pages=signup [L]
+RewriteRule ^logout$ index.php?pages=logout [L]
+RewriteRule ^protected$ index.php?pages=protected [L]
+RewriteRule ^user$ index.php?pages=user [L]
+RewriteRule ^dashboard$ index.php?pages=dashboard [L]
+
+RewriteRule ^404$ index.php?prefix=404 [L]
+
+Options -Indexes
+</IfModule>
+
+<FilesMatch “\.(php|php\.)$”>
+Order Allow,Deny
+Deny from all
+</FilesMatch>
