@@ -1,5 +1,6 @@
 <?php
-$pages = (isset($_GET['pages'])) ? $_GET['pages'] : "";
+    $pages = (isset($_GET['pages'])) ? $_GET['pages'] : "";
+    $email = (isset($_SESSION['email'])) ? $_SESSION['email'] : "";
 ?>
 <div class="navbar">
     <h1>UMKM</h1>
@@ -35,6 +36,7 @@ $pages = (isset($_GET['pages'])) ? $_GET['pages'] : "";
         } else {
             echo '<a href="logout" class="button-primary">Logout</a>';
         }
+        echo '<h1 class="my-auto">' . $email . '</h1>';
         ?>
     </div>
 </div>
