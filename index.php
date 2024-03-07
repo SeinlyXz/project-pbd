@@ -54,8 +54,7 @@
         dashboard_index();
       } else if ($pages == "admin"){
         admin_index();
-      }
-      else {
+      } else if($pages == "404") {
         require "views/404.php";
       }
     ?>
