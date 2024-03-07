@@ -18,8 +18,83 @@ body {
     border-radius: 5px;
 }
 
+.button-navbar-bottom {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 10rem;
+    background-color: #E5BA73;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.button-navbar-bottom:hover {
+    background-color: #C58940;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.styled-table td, .styled-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.styled-table th {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+    background-color: #ddd;
+}
+
+.styled-table button {
+    border: none;
+    background-color: #d62d2d;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.styled-table button:hover {
+    background-color: #d62d2d;
+}
+
+.styled-table a {
+    background-color: #4CAF50;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 .p-10 {
     padding: 2.5rem;
+}
+
+.p-6 {
+    padding: 1.5rem;
 }
 
 .font-navbar {
@@ -47,10 +122,40 @@ body {
 }
 
 .navbar {
+    padding: 10px 5rem 10px 5rem;
+    background-color: #FAEAB1;
     display: flex;
     justify-content: space-between;
-    background-color: #333;
+}
+
+.navbar input{
+    border: none;
+    border-radius: 10px;
+    width: 15rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 5px;
+}
+
+.navbar .icon{
+    margin-left: 16rem;
+}
+
+.navbar-top {
+    background-repeat: no-repeat;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: right;
+    color: #C58940;
     padding: 10px 5rem 10px 5rem;
+}
+
+.navbar-top-icon {
+    background-image: url("./static/profile.svg");
+    background-position: 74rem;
+}
+
+.default-style {
+    text-decoration: none;
 }
 
 .my-auto {
@@ -62,6 +167,10 @@ body {
     column-gap: 1rem;
 }
 
+.gap-x-12 {
+    column-gap: 3rem;
+}
+
 .navbar a {
     color: white;
     text-decoration: none;
@@ -69,6 +178,10 @@ body {
 
 .navbar a:hover {
     color: red;
+}
+
+.navbar .right{
+    float: right;
 }
 
 .navbar .active {
@@ -85,12 +198,20 @@ body {
     display: flex;
 }
 
+.flex-warp {
+    flex-wrap: wrap;
+}
+
 .flex-col {
     flex-direction: column;
 }
 
 .justify-between {
     justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
 }
 
 .login {
@@ -103,6 +224,7 @@ body {
     margin-left: 500px;
     margin-right: 500px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .login input {
@@ -133,4 +255,102 @@ body {
 .login p {
     color: red;
     margin: 5px;
+}
+
+.signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.signup-form button {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #45a049;
+}
+
+.carousel {
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background-color: #FAEAB1;
+    padding: 50px;
+}
+
+.carousel h1 {
+    color: #C58940;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.carousel .card {
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    position: relative; /* Menjadikan posisi relatif untuk membuat overlay */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-right: 25px;
+    font-size: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.carousel .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 14rem;
+    /* Opacity direction */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 20px;
+}
+
+.carousel .card h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    z-index: 1;
+    top: -30px;
+    text-align: center;
+    color: white;
+    margin: -20px;
+    padding: 0;
+}
+
+.carousel .card img {
+    width: 14rem;
+    object-fit: cover;
+    height: 14rem;
+    border-radius: 20px;
 }
