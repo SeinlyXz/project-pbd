@@ -60,6 +60,10 @@
         require "views/produk/index.php";
       } else if ($pages == "produk/upload"){
         require "views/produk/upload.php";
+      } else if ($pages == "produk/show"){
+        require "views/produk/show.php";
+      } else if ($pages == "signup"){
+        require "views/auth/signup.php";
       }
       else {
         require "views/404.php";

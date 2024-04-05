@@ -5,7 +5,7 @@
 <div class="navbar">
     <div></div>
     <a href="/home">
-        <img src="http://localhost:8888/public/static/logo.svg" alt="logo" style="width: 60px; height: 60px;" class="icon">
+        <img src="./public/static/logo.svg" alt="logo" style="width: 60px; height: 60px;" class="icon">
     </a>
     <div class="my-auto">
         <form id="search" class="my-auto">
