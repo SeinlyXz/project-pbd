@@ -4,8 +4,8 @@
 ?>
 <div>
     <?php if ($username) { ?>
-        <a href="/admin" style="text-decoration: none; color: black;">
-            <h1 class="navbar-top my-auto">Admin</h1>
+        <a href="/user" style="text-decoration: none; color: black;">
+            <h1 class="navbar-top my-auto"><?php echo $username; ?></h1>
         </a>
     <?php } else { ?>
         <a href="/signin" style="text-decoration: none; color: black;">

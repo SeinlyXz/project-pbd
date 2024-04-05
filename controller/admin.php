@@ -26,7 +26,7 @@ function admin_index(){
  */
 
 function create_admin(){
-    include "conn.php";
+    include "../conn.php";
     if(isset($_SESSION['email'])){
         $uuid = substr(uniqid(), 0, 32); // Truncate to fit into 32 characters
         $email = $_POST['email'];
@@ -89,9 +89,28 @@ function search_admin($search){
     }
 }
 
+function delete_admin(){
+    include "../conn.php";
+    if(isset($_SESSION['email'])){
+        $email = $_POST['email'];
+        $query = "DELETE FROM users WHERE email = '$email' AND role = 'admin'";
+        $user = mysqli_query($conn, $query);
+        if($user){
+            echo "202";
+        } else {
+            echo "404";
+        }
+    } else {
+        echo "<script>document.location.href='signin'</script>";
+    }
+}
+
 if (isset($_POST['action']) && $_POST['action'] == 'create') {
     session_start();
     create_admin();
+} else if (isset($_POST['action']) && $_POST['action'] == 'delete') {
+    session_start();
+    delete_admin();
 }
 
 ?>

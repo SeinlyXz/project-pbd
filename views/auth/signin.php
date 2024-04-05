@@ -14,16 +14,19 @@ $error_message = $_GET['failed'] ?? null;
 </head>
 
 <body>
-    <h2 class="text-center">Sign In</h2>
+    <h2 class="text-center font-login">Sign In</h2>
     <form action="login" method="POST">
         <div class="login">
             <div class="flex flex-col">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Email">
+                <label for="email" style="color: black;">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="flex flex-col">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required placeholder="Password">
+                <label for="password" style="color: black;">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="">
+                <a href="#">Lupa password?</a>
             </div>
             <div>
                 <button type="submit">Sign In</button>

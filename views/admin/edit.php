@@ -102,7 +102,7 @@ $user_data = show($uuid);
         var form = document.getElementById('update');
         var formData = new FormData(form);
         $.ajax({
-            url: "controller/user.php",
+            url: "controller/admin.php",
             method: "POST",
             data: formData,
             action: "update"

@@ -11,10 +11,10 @@
 ?>
 
 <head>
-    <link rel="shortcut icon" href="http://localhost:8888/public/static/logo.svg" type="image/x-icon">
-    <link rel="stylesheet" href="http://localhost:8888/public/style.css?v=<?php echo time(); ?>">
-    <script src="http://localhost:8888/public/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="shortcut icon" href="/public/static/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/public/style.css?v=<?php echo time(); ?>">
+    <script src="/public/script.js?v=<?php echo time(); ?>"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js?v=<?php echo time(); ?>"></script>
 </head>
 
 <body>
@@ -56,7 +56,12 @@
         admin_index();
       } else if($pages == "user"){
         require "views/user/index.php";
-      } else {
+      } else if($pages == "produk") {
+        require "views/produk/index.php";
+      } else if ($pages == "produk/upload"){
+        require "views/produk/upload.php";
+      }
+      else {
         require "views/404.php";
       }
     ?>

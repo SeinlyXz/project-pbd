@@ -1,9 +1,10 @@
 <?php
 require_once "controller/admin.php";
-// var_dump($users);
+// var_dump($_SESSION);
 
 $uuid = isset($_GET['uuid']) ? $_GET['uuid'] : null;
 $edit = isset($_GET['edit']) ? $_GET['edit'] : null;
+$create = isset($_GET['create']) ? $_GET['create'] : null;
 $search = isset($_GET['search']) ? $_GET['search'] : null;
 $admins = null;
 if($search){
@@ -19,9 +20,15 @@ if($search){
 
 <div>
     <div>
-        <?php include "create.php"; ?>
+        <?php 
+        if ($create) {
+            require_once "views/admin/create.php";
+        }
+        ?>
     </div>
-    <h2>List of Admin</h2>
+    <div class="flex justify-center">
+        <h2>List of Admin</h2>
+    </div>
     <table class="styled-table">
         <thead>
             <tr>
@@ -43,13 +50,18 @@ if($search){
                     <td><?= $admin['email']; ?></td>
                     <td><?= $admin['password']; ?></td>
                     <td>
-                        <button onclick="deleteAdmin(<?= $admin['id']; ?>)">Delete</button>
+                        <?php if ($admin['uuid'] != $_SESSION['uuid']) { ?>
+                            <button onclick="deleteAdmin(<?= $admin['id']; ?>)">Delete</button>
+                        <?php } ?>
                         <a href="/admin?edit=true&uuid=<?= $admin['uuid']; ?>">Edit</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
         </tbody>
     </table>
+    <div class="flex justify-center">
+        <a href="/admin?create=true" class="button-primary">Create</a>
+    </div>
     <?php
     if ($uuid && $edit) {
         require_once "views/admin/edit.php";
@@ -62,7 +74,7 @@ if($search){
         var confirmation = confirm("Are you sure you want to delete this user?");
         if (confirmation) {
             $.ajax({
-                url: "controller/user.php",
+                url: "/controller/user.php",
                 method: "POST",
                 data: {
                     id: id,

@@ -1,4 +1,5 @@
-// Add script file
+// // Add script file
+
 
 $(document).ready(function() {
     // Add smooth scrolling to all links
@@ -20,3 +21,7 @@ $(document).ready(function() {
         } // End if
     });
 });
+
+function hello(){
+    alert("Hello World");
+}

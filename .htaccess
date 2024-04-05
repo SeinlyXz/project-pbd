@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine on
 
+# Exclude static folder from rewrite rules
+RewriteCond %{REQUEST_URI} !^/static/ [NC]
 RewriteRule ^login$ ceklogin.php [QSA,L]
 RewriteRule ^home$ index.php?pages=home [QSA,L]
 RewriteRule ^admin$ index.php?pages=admin [QSA,L]
@@ -11,6 +13,9 @@ RewriteRule ^logout$ index.php?pages=logout [QSA,L]
 RewriteRule ^protected$ index.php?pages=protected [QSA,L]
 RewriteRule ^user$ index.php?pages=user [QSA,L]
 RewriteRule ^dashboard$ index.php?pages=dashboard [QSA,L]
+RewriteRule ^produk$ index.php?pages=produk [QSA,L]
+RewriteRule ^produk/upload$ index.php?pages=produk/upload [QSA,L]
+
 RewriteRule ^404$ index.php?pages=404 [QSA,L]
 
 
